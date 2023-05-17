@@ -1,11 +1,14 @@
 import React from 'react'
 
 import { Welcome } from '~/components/common/welcome'
+import { getPokemonFetch } from '~/lib/getPokemonFetch'
 
-const HomePage = () => {
+const HomePage = async () => {
+  const pokemon = await getPokemonFetch()
+
   return (
     <>
-      <Welcome />
+      <Welcome data={pokemon} />
     </>
   )
 }

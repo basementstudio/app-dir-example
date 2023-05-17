@@ -11,11 +11,7 @@ export interface headerLink {
 }
 
 export const Header = () => {
-  const navLinks: headerLink[] = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Contact', url: '/contact' }
-  ]
+  const navLinks: headerLink[] = [{ name: 'Home', url: '/' }]
 
   return (
     <>
