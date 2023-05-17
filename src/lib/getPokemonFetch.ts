@@ -1,12 +1,14 @@
 import { z } from 'zod'
 
 const ZodParser = z.object({
-  results: z.array(
-    z.object({
-      name: z.string(),
-      url: z.string()
-    })
-  )
+  results: z
+    .array(
+      z.object({
+        name: z.string(),
+        url: z.string()
+      })
+    )
+    .nonempty()
 })
 
 export type PokeResponse = z.infer<typeof ZodParser>
