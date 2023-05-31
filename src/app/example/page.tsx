@@ -1,4 +1,5 @@
 import s from './example.module.css'
+import Link from 'next/link'
 
 const Page = () => {
   return (
@@ -208,7 +209,9 @@ const Page = () => {
         feugiat rutrum euismod placerat accumsan lobortis condimentum sociis
         porta duis neque leo sem bibendum.
       </p>{' '}
+      <Link href="#with-hash">
       <h2 id="with-hash">The title</h2>
+      </Link>
       <p>
         Dictum facilisi himenaeos diam cras dictumst mollis praesent, mus non
         phasellus sagittis nec netus vehicula, congue conubia sapien quam
