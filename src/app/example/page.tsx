@@ -17,7 +17,7 @@ const Page = () => {
         accumsan est nibh ridiculus quisque ultricies himenaeos odio facilisis
         vitae.
       </p>{' '}
-      <Link href="#with-hash">Link to the end of this page</Link>
+      <Link href="#with-hash" style={{fontSize: '32px', color: 'orangered', margin: '14px 0'}}>Click me</Link>
       <p>
         Consequat dui justo dis vestibulum tristique congue ligula nec volutpat
         felis class tellus sem egestas ad primis et, vulputate laoreet quisque

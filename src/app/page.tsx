@@ -9,8 +9,15 @@ const HomePage = async () => {
 
   return (
     <>
+      <Link href="/example#with-hash" style={{
+          margin: '0 auto',
+          display: 'block',
+          width: 'fit-content',
+          fontSize: 24,
+          color: 'orangered'}}>
+        Go to title in content
+      </Link>
       <Welcome data={pokemon} />
-      <Link href="/example#with-hash">Go to title in content</Link>
     </>
   )
 }
