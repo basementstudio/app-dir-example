@@ -17,7 +17,7 @@ type GetPokemonFetch = () => Promise<PokeResponse>
 
 export const getPokemonFetch: GetPokemonFetch = async () => {
   // If this number is above ~1500 the request will fail on revalidation
-  const randomizer = Math.random() * 2000
+  const randomizer = Math.random() * 2500
 
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon?offset=${randomizer}&limit=20`,
