@@ -4,8 +4,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-import { AppHooks } from './app-hooks'
-
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' })
 
 export const metadata: Metadata = {
@@ -57,7 +55,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           </Link>
         </header>
         {children}
-        <AppHooks />
       </body>
     </html>
   )
