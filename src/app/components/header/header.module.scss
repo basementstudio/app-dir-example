@@ -39,7 +39,7 @@
 }
 
 .nav {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.925rem;
 
@@ -191,15 +191,7 @@
     flex-basis: 30%;
   }
 
-  .burguer {
-    display: none;
-  }
-
-  .nav {
+  .navButtonContainer {
     display: flex;
-
-    &ButtonContainer {
-      display: flex;
-    }
   }
 }

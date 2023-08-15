@@ -1,16 +1,8 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
-import { useAppStore } from '~/context/use-app-store'
-import {
-  basementLog,
-  gaTrackingId,
-  isClient,
-  isDev,
-  isProd
-} from '~/lib/constants'
-import { GAScripts, useAppGA } from '~/lib/ga'
+import { basementLog, isClient, isDev, isProd } from '~/lib/constants'
 
 export const AppHooks = () => {
   // TODO delete this basement log if not a basement project.
@@ -19,13 +11,11 @@ export const AppHooks = () => {
     console.log(basementLog)
   }
 
-  if (gaTrackingId) useAppGA()
-
   useOverflowDebuggerInDev()
   useUserIsTabbing()
   useFontsLoaded()
 
-  return gaTrackingId ? <GAScripts /> : null
+  return null
 }
 /* APP HOOKS */
 
@@ -76,7 +66,6 @@ const useFontsLoaded = () => {
 
     function onReady() {
       window.clearTimeout(timeout)
-      useAppStore.setState({ fontsLoaded: true })
       document.documentElement.classList.add('fonts-loaded')
     }
 

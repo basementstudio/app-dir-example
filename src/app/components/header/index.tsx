@@ -1,9 +1,7 @@
-import clsx from 'clsx'
 import Link from 'next/link'
 import React from 'react'
 
 import s from './header.module.scss'
-import MobileMenu from './mobile-menu'
 
 export interface headerLink {
   name: string
@@ -15,28 +13,6 @@ export const Header = () => {
 
   return (
     <>
-      <Link
-        target="_blank"
-        href="https://foundry.basement.studio/"
-        className={s.announcementBanner}
-      >
-        <p className={s.announcementText}>
-          Introducing BASEMENT FOUNDRY
-          <span>
-            , a curated catalog of handmade and ever-evolving typefaces by its
-            in-house artists
-          </span>
-          . Check it out
-        </p>
-        <svg viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M10.9497 1.56716L15.7542 6.3806L-3.76766e-07 6.3806L-2.78905e-07 8.6194L15.7542 8.6194L10.9497 13.4328L12.514 15L20 7.5L12.514 4.06671e-07L10.9497 1.56716Z"
-            fill="white"
-          />
-        </svg>
-      </Link>
       <div className={s.container}>
         <header className={s.header}>
           <Link href="/" className={s.logo}>
@@ -62,15 +38,6 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <MobileMenu links={navLinks} />
-          <div className={s.navButtonContainer}>
-            <button className={clsx(s.navButton, s.navButtonPrimary)}>
-              Primary
-            </button>
-            <button className={clsx(s.navButton, s.navButtonSecondary)}>
-              Secondary
-            </button>
-          </div>
         </header>
       </div>
     </>
