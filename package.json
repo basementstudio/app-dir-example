@@ -16,14 +16,15 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "eslint-config-next": "^13.4.12",
+    "eslint-config-next": "13.5.3",
     "hls.js": "1.1.5",
     "mousetrap": "1.6.5",
-    "next": "^13.4.12",
-    "react": "^18.2.0",
+    "next": "13.5.4-canary.7",
+    "react": "18.2.0",
     "react-device-detect": "^2.2.2",
-    "react-dom": "^18.2.0",
+    "react-dom": "18.2.0",
     "react-merge-refs": "1.1.0",
+    "zod": "^3.22.2",
     "zustand": "^4.3.1"
   },
   "devDependencies": {
