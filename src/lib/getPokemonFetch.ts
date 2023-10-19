@@ -28,7 +28,9 @@ export const getPokemonFetch: GetPokemonFetch = async () => {
   )
 
   if (response.status !== 200) {
-    throw new Error("Unexpected response on the API, we shouldn't revalidate")
+    throw new Error(
+      'Unexpected response on the API: in this case the application should show the last successful data and avoid leaking this error to the client.'
+    )
   }
 
   // If this parsing fails the revalidation should stop too.
