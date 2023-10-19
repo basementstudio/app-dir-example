@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "eslint-config-next": "13.5.3",
+    "eslint-config-next": "13.5.6",
     "hls.js": "1.1.5",
     "mousetrap": "1.6.5",
-    "next": "13.5.4-canary.7",
+    "next": "13.5.6-canary.7",
     "react": "18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
