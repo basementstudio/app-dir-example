@@ -8,7 +8,10 @@ const ZodParser = z.object({
         url: z.string()
       })
     )
-    .nonempty()
+    .nonempty({
+      message:
+        "This error is triggered randomly on purpose. When thrown, it should cause the build to fail, but in case the site is revalidating, it shouldn't affect the client experience."
+    })
 })
 
 export type PokeResponse = z.infer<typeof ZodParser>
