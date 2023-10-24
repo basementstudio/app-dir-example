@@ -9,7 +9,6 @@
     "dev": "next",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true yarn build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint && stylelint '**/*.{css,scss}'",
     "tsc": "tsc --pretty --noEmit"
@@ -19,7 +18,7 @@
     "eslint-config-next": "13.5.6",
     "hls.js": "1.1.5",
     "mousetrap": "1.6.5",
-    "next": "13.5.6-canary.7",
+    "next": "https://files-gcaxeesqw-vtest314-ijjk-testing.vercel.app/next-v13.5.7-canary.23.tgz",
     "react": "18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
