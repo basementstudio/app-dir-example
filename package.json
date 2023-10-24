@@ -9,7 +9,6 @@
     "dev": "next",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true yarn build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint && stylelint '**/*.{css,scss}'",
     "tsc": "tsc --pretty --noEmit"

@@ -6,13 +6,10 @@ export const getPokemonFetch = async () => {
     throw new Error('intentionally throw an error.')
   }
 
-  const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=20`,
-    {
-      next: { revalidate: 1 },
-      method: 'GET'
-    }
-  )
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`, {
+    next: { revalidate: 1 },
+    method: 'GET'
+  })
 
   if (response.status !== 200) {
     throw new Error(
