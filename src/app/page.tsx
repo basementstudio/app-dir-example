@@ -30,13 +30,7 @@ const HomePage = async () => {
           </div>
           <h3>Response</h3>
           <div className={s.box}>
-            <ul>
-              {pokemon.results.map((pokemon) => (
-                <li key={pokemon.name} style={{ textTransform: 'uppercase' }}>
-                  {pokemon.name}
-                </li>
-              ))}
-            </ul>
+            <pre>{JSON.stringify(pokemon, null, 2)}</pre>
           </div>
         </div>
       </div>
