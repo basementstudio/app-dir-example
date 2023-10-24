@@ -1,18 +1,13 @@
 export const getPokemonFetch = async () => {
-  // If this number is above ~1500 the request will fail on revalidation
-  const randomizer = Math.random() * 3200
-
-  if (randomizer > 1500) {
+  // fail during runtime but not build time
+  if (process.env.NEXT_PHASE !== 'phase-production-build') {
     throw new Error('intentionally throw an error.')
   }
 
-  const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=20`,
-    {
-      next: { revalidate: 1 },
-      method: 'GET'
-    }
-  )
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`, {
+    next: { revalidate: 1 },
+    method: 'GET'
+  })
 
   if (response.status !== 200) {
     throw new Error(
